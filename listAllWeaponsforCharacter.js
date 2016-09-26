@@ -1,5 +1,3 @@
-// You will use this Object for the answers
-// DO NOT CHANGE THIS SECTION
 var adventuringParty = {
     wizard: {
         name: "Gandalf",
@@ -26,35 +24,15 @@ var adventuringParty = {
     }
 }
 
-// MAKE CHANGES AFTER THIS
-
-// This function should list all weapons for the character
-function listWeapons(character) {
-    console.log("Listing weapons for " + character.name + ":");
-    for(i in character.weapons) {
+var listWeapons = function(character) {
+    console.log("Listing weapons for " + character.name);
+    for(var i in character.weapons) {
         var weapon = character.weapons[i];
-        console.log(" * " . weapon[name]);
+        console.log("\t* " + weapon.name);
     }
 }
 
-listWeapons(wizard);
-listWeapons(warrior);
-
-/*
-EXAMPLE OUTPUT:
 
 
-Characters:                                                                                                                                                                                                  
- * Gandalf                                                                                                                                                                                                   
- * Conan                                                                                                                                                                                                     
-Listing weapons for Gandalf:                                                                                                                                                                                 
- * Staff                                                                                                                                                                                                     
- * Dagger                                                                                                                                                                                                    
-Listing weapons for Conan:                                                                                                                                                                                   
- * Axe                                                                                                                                                                                                       
- * Bow                                                                                                                                                                                                       
-Conan attacks with his axe                                                                                                                                                                                   
-He hits for 17 damage                                                                                                                                                                                        
-Gandalf attacks with his STAFF                                                                                                                                                                               
-He hits for 3 damage         
- */
+listWeapons( adventuringParty.warrior );
+listWeapons( adventuringParty.wizard );

@@ -1,23 +1,3 @@
-
-// EXAMPLE OUTPUT:
-
-
-// Characters:                                                                                                                                                                                                  
-//  * Gandalf                                                                                                                                                                                                   
-//  * Conan                                                                                                                                                                                                     
-// Listing weapons for Gandalf:                                                                                                                                                                                 
-//  * Staff                                                                                                                                                                                                     
-//  * Dagger                                                                                                                                                                                                    
-// Listing weapons for Conan:                                                                                                                                                                                   
-//  * Axe                                                                                                                                                                                                       
-//  * Bow                                                                                                                                                                                                       
-// Conan attacks with his axe                                                                                                                                                                                   
-// He hits for 17 damage                                                                                                                                                                                        
-// Gandalf attacks with his STAFF                                                                                                                                                                               
-// He hits for 3 damage         
-
-// You will use this Object for the answers
-// DO NOT CHANGE THIS SECTION
 var adventuringParty = {
     wizard: {
         name: "Gandalf",
@@ -44,25 +24,11 @@ var adventuringParty = {
     }
 }
 
-
-// MAKE CHANGES AFTER THIS
-
-
-// This function lists all characters in the party
-
-// This function lists all characters in the party
 function listCharacters() {
     console.log("Characters:");
-    for(obj = 0; obj < 1; obj++) {
-        (obj in adventuringParty)
-        console.log(" * " + adventuringParty.wizard.name);
-        console.log(" * " + adventuringParty.warrior.name);
+    for(var obj in adventuringParty) {
+        console.log(" * " + adventuringParty[obj].name);
     }
 }
 
-// Run the functions
-listCharacters();
-
-// Characters:                                                                                                                                                                                                  
-//  * Gandalf                                                                                                                                                                                                   
-//  * Conan  
+listCharacters(adventuringParty);

@@ -1,5 +1,3 @@
-// You will use this Object for the answers
-// DO NOT CHANGE THIS SECTION
 var adventuringParty = {
     wizard: {
         name: "Gandalf",
@@ -26,41 +24,4 @@ var adventuringParty = {
     }
 }
 
-// MAKE CHANGES AFTER THIS
 
-
-// This function should attack with the specified weapon
-// It uses the weapon damage from the object to determine the maximum damage of this weapon
-function weaponAttack(character, weaponName) {
-    console.log(character.name + " attacks with his " + weaponName);
-    var maxDamage;
-    for(i in character.weapons) {
-        var weapon = character.weapons[i];
-        if(weapon.name == weaponName.toUpperCase()) {
-            maxDamage = weapon.damage;
-        }
-    }
-    console.log("He hits for " + Math.round( Math.random() * maxDamage ) + " damage");
-}
-
-weaponAttack("Warrior", "axe");
-weaponAttack("Wizard", "STAFF");
-
-/*
-EXAMPLE OUTPUT:
-
-
-Characters:                                                                                                                                                                                                  
- * Gandalf                                                                                                                                                                                                   
- * Conan                                                                                                                                                                                                     
-Listing weapons for Gandalf:                                                                                                                                                                                 
- * Staff                                                                                                                                                                                                     
- * Dagger                                                                                                                                                                                                    
-Listing weapons for Conan:                                                                                                                                                                                   
- * Axe                                                                                                                                                                                                       
- * Bow                                                                                                                                                                                                       
-Conan attacks with his axe                                                                                                                                                                                   
-He hits for 17 damage                                                                                                                                                                                        
-Gandalf attacks with his STAFF                                                                                                                                                                               
-He hits for 3 damage         
- */
