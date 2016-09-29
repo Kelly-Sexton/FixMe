@@ -25,27 +25,20 @@ var adventuringParty = {
 }
 
 
-// This function should attack with the specified weapon
-// It uses the weapon damage from the object to determine the maximum damage of this weapon
 function weaponAttack(character, weaponName) {
     console.log(character.name + " attacks with his " + weaponName);
     var maxDamage;
-    for(i in character.weapons) {
-        var weaponName = character.weapons[i];
-        
-        
-        if(weapon.name == weaponName) {
-            maxDamage = weaponName.damage;
-            console.log("He hits for " +  maxDamage  + " damage");
+    for(var i in character.weapons) {
+        var weapon = character.weapons[i];
+        if(weapon.name.toUpperCase() == weaponName.toUpperCase()) {
+          maxDamage = weapon.damage;
         }
     }
-
-
-console.log("He hits for " + Math.round( Math.random() * maxDamage ) + " damage");
-
+    console.log("He hits for " + Math.round( Math.random() * maxDamage )  + " damage");
 }
 
 
+    
+weaponAttack(adventuringParty.warrior, "Axe");
+weaponAttack(adventuringParty.wizard, "Staff");
 
-weaponAttack( adventuringParty.warrior , "axe");
-weaponAttack( adventuringParty.wizard, "STAFF");
